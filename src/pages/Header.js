@@ -1,15 +1,15 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import HeaderLogoI from "../images/HeaderLogo.png";
 import "../App.css";
+import LogoImg from "../img/logo.png";
 
 const Header = ({ isLogin }) => {
   const navigate = useNavigate();
   const onClickLogo = () => {
     navigate("/");
   };
-
+  const isLogins = useState(false);
   const onLogout = () => {
     //로그아웃 처리하기
     navigate("/");
@@ -19,10 +19,13 @@ const Header = ({ isLogin }) => {
     <>
       <Container>
         <LogoContainer>
-          <HeaderLogoImage src={HeaderLogoI} onClick={onClickLogo} />
-          <HeaderLogo onClick={onClickLogo}>2-POW</HeaderLogo>
+          <HeaderLogoImage src={LogoImg} onClick={onClickLogo} />
         </LogoContainer>
-        {isLogin ? <SmallButton onClick={onLogout}>로그아웃</SmallButton> : ""}
+        {/* {isLogin ? (
+          <SmallButton onClick={onLogout}>마이페이지</SmallButton>
+        ) : (
+          "로그인"
+        )} */}
       </Container>
       <Line />
     </>
@@ -47,8 +50,8 @@ const LogoContainer = styled.div`
 `;
 
 const HeaderLogoImage = styled.img`
-  width: 3rem;
-  height: 3rem;
+  width: 168px;
+  height: 66px;
   cursor: pointer;
 `;
 
