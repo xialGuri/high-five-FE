@@ -38,14 +38,14 @@
 }
 /* 폰트 설정 */
 @font-face {
-  font-family: "GmarketSansTTFBold.ttf";
+  font-family: "GmarketSans-Bold";
   src: url("./fonts/GmarketSansTTFBold.ttf");
 }
 @font-face {
-  font-family: "GmarketSansTTFLight.ttf";
+  font-family: "GmarketSans-Light";
   src: url("./fonts/GmarketSansTTFLight.ttf");
 }
 @font-face {
-  font-family: "GmarketSansTTFMedium.ttf";
+  font-family: "GmarketSans-Medium";
   src: url("./fonts/GmarketSansTTFMedium.ttf");
 }
