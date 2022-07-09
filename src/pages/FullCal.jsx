@@ -7,17 +7,7 @@ import googleCalendarPlugin from "@fullcalendar/google-calendar";
 
 const FullCal = () => {
   const apiKey = process.env.REACT_APP_CAL_API_KEY;
-  const dateClick = (arg) => {
-    alert(arg.dateStr);
-  };
-  const renderEventContent = (eventInfo) => {
-    return (
-      <>
-        <b>{eventInfo.timeText}</b>
-        <i>{eventInfo.event.title}</i>
-      </>
-    );
-  };
+  console.log(apiKey);
   return (
     <>
       <FullCalendar
