@@ -36,8 +36,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100vw;
-  height: 5em;
-
+  height: 6.69em;
   overflow: hidden;
 `;
 
@@ -46,14 +45,14 @@ const LogoContainer = styled.div`
 `;
 
 const HeaderLogoImage = styled.img`
-  width: 160px;
-  height: 60px;
+  width: 10.5em;
+  height: 4.13em;
   cursor: pointer;
 `;
 
 const SmallButton = styled.div`
   font-family: GmarketSans-Medium;
-  font-size: 1.06rem;
+  font-size: 1.56em;
   padding: 0.5rem;
   margin-right: 5rem;
   cursor: pointer;
