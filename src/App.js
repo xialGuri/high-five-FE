@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<FullCal />}></Route>
+        <Route path="/cal" element={<FullCal />}></Route>
       </Routes>
     </Router>
   );

@@ -3,8 +3,10 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
+import googleCalendarPlugin from "@fullcalendar/google-calendar";
 
 const FullCal = () => {
+  const apiKey = process.env.REACT_APP_CAL_API_KEY;
   const dateClick = (arg) => {
     alert(arg.dateStr);
   };
@@ -19,12 +21,12 @@ const FullCal = () => {
   return (
     <>
       <FullCalendar
-        plugins={[dayGridPlugin]}
+        plugins={[dayGridPlugin, googleCalendarPlugin]}
         initialView="dayGridMonth"
-        events={[
-          { title: "event 1", date: "2019-04-01" },
-          { title: "event 2", date: "2019-04-02" },
-        ]}
+        googleCalendarApiKey={apiKey}
+        events={{
+          googleCalendarId: "skehdgus400@gmail.com",
+        }}
       />
     </>
   );
