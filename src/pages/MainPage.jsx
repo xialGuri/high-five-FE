@@ -15,27 +15,6 @@ import axios from "axios";
 
 const MainPage = () => {
   const navigate = useNavigate();
-  // Item 단위의 컴포넌트
-  const MenuItem = ({ text }) => {
-    console.log("dddd");
-    return (
-      <div className="menu-item" style={{ color: "white" }}>
-        {text}
-      </div>
-    );
-  };
-
-  // MenuItem들을 list만큼 생성한 List단위의 컴포넌트
-  const Menu = (list) =>
-    list.map((el) => {
-      const { name } = el;
-      return <MenuItem text={name} key={name} />;
-    });
-  const onClickLogo = () => {
-    navigate("/");
-  };
-
-  const [DataItem, setDataItem] = useState(null);
 
   return (
     <>
