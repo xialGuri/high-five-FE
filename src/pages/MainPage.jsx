@@ -10,6 +10,9 @@ import Outfit1Img from "../img/Outfit1.png";
 import Outfit2Img from "../img/Outfit2.png";
 import Outfit3Img from "../img/Outfit3.png";
 import Outfit4Img from "../img/Outfit4.png";
+import Outfit5Img from "../img/Outfit5.png";
+import Outfit6Img from "../img/Outfit6.png";
+import Outfit7Img from "../img/Outfit7.png";
 import axios from "axios";
 
 const MainPage = () => {
@@ -45,6 +48,8 @@ const MainPage = () => {
             <OutfitImg src={Outfit2Img}></OutfitImg>
             <OutfitImg src={Outfit3Img}></OutfitImg>
             <OutfitImg src={Outfit4Img}></OutfitImg>
+            <OutfitImg src={Outfit5Img}></OutfitImg>
+            <OutfitImg src={Outfit7Img}></OutfitImg>
           </ScrollContainer>
         </FootContainer>
       </Container>
