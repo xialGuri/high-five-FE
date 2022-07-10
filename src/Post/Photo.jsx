@@ -18,7 +18,7 @@ export default function Photo() {
   `;
   const BoyText = styled.div`
     position: absolute;
-    top: 770px;
+    top: 880px;
     left: 620px;
     font-size: 2.7rem;
   `;
@@ -34,15 +34,15 @@ export default function Photo() {
           <BoyImage src={boyTalking} />
           <BoyText>
             너가 정한 데이트룩은 <br />
-            7월 10일,11일이 적합하고 <br />
-            가장 입기 좋은 날은 11일이야!
+            7월 12일이 적합하고 <br />
+            가장 입기 좋은 날은 12일이야!
             <br />
             <Button
               style={{ borderRadius: "20px", height: "40px" }}
               onClick={{}}
             >
               {" "}
-              달력 확인하러가기
+              <a href="/cal">약속 날짜 확인하러 가기</a>
             </Button>
           </BoyText>
         </div>
