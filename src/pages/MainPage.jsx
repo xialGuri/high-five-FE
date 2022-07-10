@@ -21,6 +21,12 @@ const MainPage = () => {
     navigate("/registerScreen");
   };
   const [isLogin, setIsLogin] = useState(false);
+  const isLogins = useState(false);
+  const onLogout = () => {
+    //로그아웃 처리하기
+    navigate("/cal");
+  };
+
 
   useEffect(() => {}, []);
   return (
@@ -36,9 +42,9 @@ const MainPage = () => {
           <ThirdFont>가 당신의 옷에</ThirdFont>
           <FourthFont>날씨를 맞춥니다.</FourthFont>
           <RegisterButton
-            src={AddClothButton}
-            onClick={onClickLogin}
-          ></RegisterButton>
+              src={AddClothButton}
+              onClick={onClickLogin}
+          ></RegisterButton>}
         </BodyContainer>
         <FootContainer>
           <Line />
@@ -117,7 +123,7 @@ const ThirdFontHighLight = styled.div`
   font-color: #2c2c2c;
   background-color: white;
   margin-top: 755px;
-  margin-left: 600px;
+  margin-left: 930px;
 `;
 const ThirdFont = styled.div`
   position: absolute;
@@ -125,7 +131,7 @@ const ThirdFont = styled.div`
   font-size: 60px;
   color: white;
   margin-top: 755px;
-  margin-left: 906px;
+  margin-left: 1236px;
 `;
 const FourthFont = styled.div`
   font-family: GmarketSans-Bold;
@@ -133,20 +139,20 @@ const FourthFont = styled.div`
   font-size: 60px;
   color: white;
   margin-top: 840px;
-  margin-left: 858px;
+  margin-left: 1188px;
 `;
 const FirstImg = styled.img`
   width: 31.88em;
   height: 36.94em;
   margin-top: 67px;
-  margin-right: 30px;
+  margin-right: -300px;
 `;
 const SecondImg = styled.img`
   position: absolute;
   width: 31.88em;
   height: 42.88em;
   margin-top: 452px;
-  margin-left: 30px;
+  margin-left: 100px;
 `;
 
 const RegisterButton = styled.img`
@@ -163,6 +169,14 @@ const FooterMainFont = styled.div`
   font-size: 3.13em;
   color: white;
   margin-top: 59px;
+`;
+
+const SmallButton = styled.div`
+  font-family: GmarketSans-Medium;
+  font-size: 1.56em;
+  padding: 0.5rem;
+  margin-right: 5rem;
+  cursor: pointer;
 `;
 
 export default MainPage;
