@@ -15,7 +15,12 @@ import axios from "axios";
 
 const MainPage = () => {
   const navigate = useNavigate();
+  const onClickLogin = () => {
+    navigate("/login");
+  };
+  const [isLogin, setIsLogin] = useState(false);
 
+  useEffect(() => {}, []);
   return (
     <>
       <Header />
@@ -28,7 +33,10 @@ const MainPage = () => {
           <ThirdFontHighLight>Dreather</ThirdFontHighLight>
           <ThirdFont>가 당신의 옷에</ThirdFont>
           <FourthFont>날씨를 맞춥니다.</FourthFont>
-          <RegisterButton src={AddClothButton}></RegisterButton>
+          <RegisterButton
+            src={AddClothButton}
+            onClick={onClickLogin}
+          ></RegisterButton>
         </BodyContainer>
         <FootContainer>
           <Line />

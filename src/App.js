@@ -5,9 +5,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FullCal from "./pages/FullCal.jsx";
 import MainPage from "./pages/MainPage.jsx";
 import Login from "./pages/Login.jsx";
+import axios from "axios";
 // import FullCalendar from "@fullcalendar/react";
 // import dayGridPlugin from "@fullcalendar/daygrid";
+
 function App() {
+  const [isLogin, setIsLogin] = useState(false);
+
   return (
     <Router>
       <Routes>

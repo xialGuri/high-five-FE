@@ -21,11 +21,7 @@ const Header = ({ isLogin }) => {
         <LogoContainer>
           <HeaderLogoImage src={LogoImg} onClick={onClickLogo} />
         </LogoContainer>
-        {isLogins ? (
-          <SmallButton onClick={onLogout}>로그인</SmallButton>
-        ) : (
-          "로그아웃"
-        )}
+        {isLogins ? <></> : "로그아웃"}
       </Container>
     </>
   );
