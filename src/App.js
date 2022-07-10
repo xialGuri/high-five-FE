@@ -1,23 +1,21 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React, { useEffect, useContext, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import FullCal from "./pages/FullCal.jsx";
-import MainPage from "./pages/MainPage.jsx";
-import Login from "./pages/Login.jsx";
-import axios from "axios";
-// import FullCalendar from "@fullcalendar/react";
-// import dayGridPlugin from "@fullcalendar/daygrid";
-
+import Register from "./RegisterForm/Register";
+import LoginGoogle from "./LoginPage/LoginGoogle";
+import RegisterScreen from "./Screen/RegisterScreen";
+import ListviewScreen from "./Screen/ListviewScreen";
+import MainPage from "./pages/MainPage";
+import FullCal from "./pages/FullCal";
 function App() {
-  const [isLogin, setIsLogin] = useState(false);
-
   return (
     <Router>
       <Routes>
         <Route path="/" element={<MainPage />}></Route>
-        <Route path="/login" element={<Login />}></Route>
+        <Route path="/registerScreen" element={<RegisterScreen />}></Route>
+        <Route path="/list" element={<ListviewScreen />}></Route>
         <Route path="/cal" element={<FullCal />}></Route>
+        {/*    <Route path="/" element={<LoginGoogle />}></Route>*/}
       </Routes>
     </Router>
   );

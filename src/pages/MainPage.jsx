@@ -6,17 +6,19 @@ import Header from "./Header.js";
 import MainImg1 from "../img/MainImg1.png";
 import MainImg2 from "../img/MainImg2.png";
 import AddClothButton from "../img/AddClothButton.png";
-import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import Outfit1Img from "../img/Outfit1.png";
 import Outfit2Img from "../img/Outfit2.png";
 import Outfit3Img from "../img/Outfit3.png";
 import Outfit4Img from "../img/Outfit4.png";
+import Outfit5Img from "../img/Outfit5.png";
+import Outfit6Img from "../img/Outfit6.png";
+import Outfit7Img from "../img/Outfit7.png";
 import axios from "axios";
 
 const MainPage = () => {
   const navigate = useNavigate();
   const onClickLogin = () => {
-    navigate("/login");
+    navigate("/registerScreen");
   };
   const [isLogin, setIsLogin] = useState(false);
 
@@ -46,6 +48,8 @@ const MainPage = () => {
             <OutfitImg src={Outfit2Img}></OutfitImg>
             <OutfitImg src={Outfit3Img}></OutfitImg>
             <OutfitImg src={Outfit4Img}></OutfitImg>
+            <OutfitImg src={Outfit5Img}></OutfitImg>
+            <OutfitImg src={Outfit7Img}></OutfitImg>
           </ScrollContainer>
         </FootContainer>
       </Container>
@@ -53,18 +57,19 @@ const MainPage = () => {
   );
 };
 const OutfitImg = styled.img`
-  width: 24.06em;
+  // width: 24.06em;
+  width: 30.06em;
   height: 34.63em;
   padding: 20px;
 `;
 const Container = styled.div`
   width: 100%;
-  height: 123.2em;
+  height: 135.2em;
   background-color: #2c2c2c;
 `;
 const BodyContainer = styled.div`
   width: 100%;
-  height: 75em;
+  height: 85em;
   display: flex;
   justify-content: space-between;
 `;
@@ -127,7 +132,7 @@ const FourthFont = styled.div`
   position: absolute;
   font-size: 60px;
   color: white;
-  margin-top: 828px;
+  margin-top: 840px;
   margin-left: 858px;
 `;
 const FirstImg = styled.img`
@@ -149,7 +154,7 @@ const RegisterButton = styled.img`
   width: 40.88em;
   height: 5.14em;
   margin-top: 967px;
-  right: 55px;
+  right: 90px;
   cursor: pointer;
 `;
 
