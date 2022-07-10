@@ -1,5 +1,23 @@
+/* 폰트 설정 */
+@font-face {
+  font-family: "GmarketSans-Bold";
+  src: url("./font/GmarketSansTTFBold.ttf");
+}
+@font-face {
+  font-family: "GmarketSans-Light";
+  src: url("./font/GmarketSansTTFLight.ttf");
+}
+@font-face {
+  font-family: "GmarketSans-Medium";
+  src: url("./font/GmarketSansTTFMedium.ttf");
+}
+
+
 .App {
   text-align: center;
+  background-color: #323232;
+  font-family: GmarketSans-Bold;
+
 }
 
 .App-logo {
@@ -14,7 +32,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  font-family: "GmarketSans-Bold";
+  background-color: #323232;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +41,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
+
 }
 
 .App-link {
