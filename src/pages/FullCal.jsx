@@ -5,32 +5,15 @@ import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import googleCalendarPlugin from "@fullcalendar/google-calendar";
 import axios from "axios";
-import Modal from "./CalModal.jsx";
 
 const FullCal = () => {
   const apiKey = process.env.REACT_APP_CAL_API_KEY;
   console.log(apiKey);
-  const [events, setEvents] = useState([]);
-  const [modalVisible, setModalVisible] = useState(false);
-  const openModal = () => {
-    setModalVisible(true);
-  };
-  const closeModal = () => {
-    setModalVisible(false);
-  };
 
   const showDetail = (e) => {
     alert("d");
   };
-  useEffect(() => {
-    axios
-      .get("/dummy/calendar_list.json")
-      .then((res) => {
-        setEvents(res.data.calendarList);
-        console.log(res);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+
   return (
     <>
       <FullCalendar
@@ -45,8 +28,7 @@ const FullCal = () => {
         height={"100vh"}
         width={"100vw"}
         googleCalendarApiKey={apiKey}
-        //  { googleCalendarId: "skehdgus400@gmail.com" }
-        events={events}
+        events={{ googleCalendarId: "skehdgus401@gmail.com" }}
         eventColor="#efb33f"
         eventClick={() => showDetail("ee")}
       />
