@@ -1,2 +1,2 @@
-### GDSC 해커톤 
-#### 하이파이브 프론트 레포입니다.
+### GDSC hackathon
+#### HighFive Frontend Repository
